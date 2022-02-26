@@ -1,0 +1,20 @@
+{% extends 'home_base.html' %} {% block head %}{% endblock %} {% block body %}
+{% if tasks.ID %}
+<div class="danger" id="info_board">
+    <i class='bx bx-x icon' id="icon" style="margin-top: 15px;"></i>
+    <strong>{{ tasks.Info }}</strong> <br> {{ tasks.Detail }}
+</div>
+{% endif %}
+<table>
+    <ul class="table">
+        <li class="table-header">
+            <div class="col col-1"><strong>IDENTIFIER</strong></div>
+            <div class="col col-2"><strong>CONTENT</strong></div>
+        </li>
+        <li class="table-row">
+            <div class="col col-1"><strong>Nothing to display!</strong></div>
+            <div class="col col-2">Nothing to display!</div>
+        </li>
+    </ul>
+</table>
+{% endblock %}

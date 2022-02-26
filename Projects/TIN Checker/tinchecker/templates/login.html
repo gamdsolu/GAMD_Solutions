@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login-style.css') }}">
+    <title>Login Page | TIN Checker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login_form">
+            <span class="title">Login</span>
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <div class="input-field">
+                    {{ form.email_add(type="text", placeholder="Enter your email") }}
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    {{ form.password(type="password", class="password", placeholder="Enter your password") }}
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="input-field button">
+                    {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/login-script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{% extends 'admin_base.html' %}
+{% block title %}
+Admin | Dashboard
+{% endblock %}
+{% block body %}
+<!-- MAIN -->
+<main>
+	<h1 class="title">Dashboard</h1>
+	<div class="info-data">
+		<div class="card">
+			<div class="head">
+				<div>
+					<h2>1500</h2>
+					<p>Total Number of Users</p>
+				</div>
+			</div>
+			<span class="progress" data-value="40%"></span>
+			<span class="label">40%</span>
+		</div>
+		<div class="card">
+			<div class="head">
+				<div>
+					<h2>234</h2>
+					<p>Number of Mobile Phone Users</p>
+				</div>
+			</div>
+			<span class="progress" data-value="60%"></span>
+			<span class="label">60%</span>
+		</div>
+		<div class="card">
+			<div class="head">
+				<div>
+					<h2>465</h2>
+					<p>Number of Computer Users</p>
+				</div>
+			</div>
+			<span class="progress" data-value="30%"></span>
+			<span class="label">30%</span>
+		</div>
+	</div>
+</main>
+{% endblock %}

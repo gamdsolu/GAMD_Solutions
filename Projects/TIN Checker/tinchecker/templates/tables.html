@@ -1,0 +1,38 @@
+{% extends 'admin_base.html' %}
+{% block title %}
+Admin | Tables
+{% endblock %}
+{% block body %}
+<!-- MAIN -->
+<main>
+    <div class="data">
+		<div class="content-data">
+			<div class="head">
+				<h3>Table</h3>
+			</div>
+			<div class="chat-box">
+				<table>
+					<ul class="table">
+						<li class="table-header">
+							<div class="col col-3"><strong>TIN Number</strong></div>
+							<div class="col col-3"><strong>User IP</strong></div>
+							<div class="col col-3"><strong>Operating System</strong></div>
+							<div class="col col-3"><strong>Browser</strong></div>
+							<div class="col col-3"><strong>Date and Time</strong></div>
+						</li>
+						{% for task in tasks %}
+						<li class="table-row">
+							<div class="col col-3">{{ task.tin_num }}</div>
+							<div class="col col-3">{{ task.userIP }}</div>
+							<div class="col col-3">{{ task.deviceInfo }}</div>
+							<div class="col col-3">{{ task.browserInfo }}</div>
+							<div class="col col-3">{{ task.dateTime }}</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</table>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}

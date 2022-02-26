@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index-style.css') }}">
+    <title>Home Page | TIN Checker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="title">
+                <span class="logo">TIN Checker</span>
+                <span class="company">GAMD Solutions |<span class="motto">Known for quality!</span></span>
+            </div>
+            <a href="{{ url_for('login_page') }}">Admin Page</a>
+        </div>
+        <form action="/" method="post">
+            <div class="main">
+                <div class="info">
+                    <span>Enter your TIN number!</span>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="tinnumber" id="tinnumber" class="text" placeholder="Enter your TIN Number...">
+                    <input type="submit" value="Search" class="button" id="searchbtn">
+                </div>
+            </div>
+        </form>
+        <div class="bottom">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index-script.js') }}"></script>
+</body>
+
+</html>

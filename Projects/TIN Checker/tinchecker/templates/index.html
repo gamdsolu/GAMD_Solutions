@@ -1,0 +1,22 @@
+{% extends 'home_base.html' %} {% block head %}{% endblock %} {% block body %}
+{%if tasks %}
+<div class="success" id="info_board">
+    <strong>Sucess!</strong>
+    <i class='bx bx-x icon' id="icon"></i>
+</div>
+{% endif %}
+<table>
+    <ul class="table">
+        <li class="table-header">
+            <div class="col col-1"><strong>IDENTIFIER</strong></div>
+            <div class="col col-2"><strong>CONTENT</strong></div>
+        </li>
+        {% for task in tasks %}
+        <li class="table-row">
+            <div class="col col-1"><strong>{{ task }}</strong></div>
+            <div class="col col-2">{{ tasks[task] }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</table>
+{% endblock %}      

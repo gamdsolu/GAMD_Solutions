@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+:root{
+    --button-color: #858482;
+    --hover-color: #999896;
+    --active-color: #71706e;
+    --text-color: #535250;
+    --text-white-color: #ffff;
+    --background-color: #9999;
+    
+    --success-text-color: #0b3b21;
+    --success-background-color: #beffdc;
+    --success-border-color: #a0ffbe;
+    --danger-text-color: #9b3b21;
+    --danger-background-color: #ff9f85;
+    --danger-border-color: #f5957b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{  
+    display: flex;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    margin: 40px 20px 0px 20px;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 50px 50px 50px 40px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    letter-spacing: 0px;
+    word-spacing: 10px;
+}
+.company, .motto {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+.motto {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+.top a {
+    text-decoration: none;
+    color: var(--text-white-color);
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    height: 40px;
+    right: 0;
+    position: absolute;
+    margin: 10px 30px 0px 0px;
+}
+.top a:hover {
+    background-color: var(--hover-color);
+}
+.top a:active {
+    background-color: var(--active-color);
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 20px 30px;
+}
+.main .info{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+.main .inputs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.main .text {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.main .text:is(:hover, :focus) {
+    border: 1px solid var(--active-color)
+}
+.main .button {
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--text-white-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+.main .button:hover {
+    background-color: var(--hover-color);
+}
+.main .button:active {
+    background-color: var(--active-color);
+}
+.success {
+    padding: 13px 20px;
+    margin: 0px 30px 30px 30px;
+    border-radius: 5px;
+    background-color: var(--success-background-color);
+    color: var(--success-text-color);
+    border: 1px solid var(--success-border-color);
+}
+.danger {
+    padding: 13px 20px;
+    margin: 0px 30px 30px 30px;
+    border-radius: 5px;
+    background-color: var(--danger-background-color);
+    color: var(--danger-text-color);
+    border: 1px solid var(--danger-border-color);
+}
+.success .icon,
+.danger .icon {
+   font-size: 25px;
+   right: 0;
+   position: absolute;
+   margin-right: 40px;
+   font-weight: 500;
+   cursor: pointer;
+}
+.success .icon:hover,
+.danger .icon:hover {
+    color: var(--text-color);
+}
+.table {
+    padding: 0px 40px;
+    margin: 0px 0px 50px 0px;
+}
+.table li {
+    border-radius: 3px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.table .table-header {
+    background-color: var(--background-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+}
+.table .table-row {
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.15);
+    color: var(--text-color);
+}
+.table .col-1 {
+    flex-basis: 30%;
+    font-weight: bolder;
+}
+.table .col-2 {
+    flex-basis: 70%;
+}
+@media only screen and (max-width: 599px) {
+    .container{
+        margin: 0px 0px 0px 0px;
+        min-width: 282px;
+    }
+    .top {
+        padding: 30px 30px 30px 20px;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        font-size: 50px;
+        word-spacing: 5px;
+    }
+    .company, .motto {
+        font-size: 15px;
+    }
+    .motto {
+        font-size: 15px;
+    }
+    .top a {
+        padding: 5px 10px;
+        font-size: 12px;
+        height: 30px;
+    }
+    .main {
+        padding: 10px 20px 10px 20px;
+    }
+    .main .info{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .main .text {
+        height: 35px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    .main .button {
+        height: 35px;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .alert {
+        margin: 0px 20px 10px 20px;
+    }
+    .alert .icon {
+       font-size: 20px;
+    }
+    .table {
+        padding: 0px 20px;
+    }
+    .table li {
+        padding: 10px 20px;
+        margin-bottom: 5px;
+    }
+    @media only screen and (max-width: 449px) {
+        .logo {
+            font-size: 40px;
+        }
+        .company, .motto {
+            font-size: 12px;
+        }
+        .motto {
+            font-size: 10px;
+        }
+        @media only screen and (max-width: 390px) {
+            .logo {
+                font-size: 30px;
+            }
+            .company, .motto {
+                margin-left: 5px;
+            }
+            @media only screen and (max-width: 349px) {
+                .company, .motto {
+                    display: none;
+                }
+                @media only screen and (max-width: 329px) {
+                    .logo {
+                        font-size: 20px;
+                        word-spacing: normal;
+                    }
+                    .top a {
+                        margin-top: 0;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    } 
+}
