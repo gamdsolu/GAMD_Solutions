@@ -83,7 +83,7 @@ def tables_page():
     items = Users.query.all()
     return render_template('tables.html', tasks=items)
 
-@app.route('/tinchecker', methods=['POST', 'GET'])
+@app.route('/tincheck', methods=['POST', 'GET'])
 @login_required
 def tinchecker_page():
     if request.method == 'POST':
@@ -97,9 +97,9 @@ def tinchecker_page():
         meta_data = Users(tin, userIP,deviceInfo, browserInfo, dateTime)
         
         if not tin:
-            return render_template('tinchecker_error.html', tasks={"ID":True, "Info":"Empty Entery!", "Detail":status_dict[1]})
+            return render_template('error_tin.html', tasks={"ID":True, "Info":"Empty Entery!", "Detail":status_dict[1]})
         elif not tin.isdigit():
-            return render_template('tinchecker_error.html', tasks={"ID":True, "Info":"Wrong Entery!", "Detail":status_dict[2]})
+            return render_template('error_tin.html', tasks={"ID":True, "Info":"Wrong Entery!", "Detail":status_dict[2]})
         else:
             try:
                 body = BeautifulSoup(requests.get(url + tin).text, 'lxml').body.text.strip()
@@ -117,18 +117,18 @@ def tinchecker_page():
                         z+=1
                     dict.pop("TPNAME_F")
                 except:
-                    return render_template('tinchecker_error.html', tasks={"ID":True, "Info":"User Cannot Be Found!", "Detail":status_dict[3]})
+                    return render_template('error_tin.html', tasks={"ID":True, "Info":"User Cannot Be Found!", "Detail":status_dict[3]})
                 try:
                     db.session.add(meta_data)
                     db.session.commit()
                 except:
                     pass
             except:
-                return render_template('tinchecker_error.html', tasks={"ID":True, "Info":"No Internet Connection!", "Detail":status_dict[4]})
-            return redirect('/tinchecker')
+                return render_template('error_tin.html', tasks={"ID":True, "Info":"No Internet Connection!", "Detail":status_dict[4]})
+            return redirect('/tincheck')
             
     else:
-        return render_template("tinchecker.html", tasks=dict)
+        return render_template("tincheck.html", tasks=dict)
 
 @app.route('/users')
 @login_required
