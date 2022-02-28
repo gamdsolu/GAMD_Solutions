@@ -559,3 +559,81 @@ main .btn-send:hover {
 .table .col-3 {
     flex-basis: 20%;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px 30px 20px 30px; */
+}
+.main .info{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+.main .inputs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.main .text {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.main .text:is(:hover, :focus) {
+    border: 1px solid var(--active-color)
+}
+.main .button {
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--text-white-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+.main .button:hover {
+    background-color: var(--hover-color);
+}
+.main .button:active {
+    background-color: var(--active-color);
+}
+
+
+main .data .content-data .chat-box .table {
+    padding: 0px 0px;
+    margin: 10px 0px;
+}
+main .data .content-data .chat-box .table li {
+    padding: 10px 20px;
+}
+
+main .data .chat-box .danger {
+    padding: 13px 20px;
+    margin: 0px 30px 30px 30px;
+    border-radius: 5px;
+    background-color: #ff9f85;
+    color: #9b3b21;
+    border: 1px solid #f5957b;
+}
+main .data .chat-box .danger .icon {
+   font-size: 25px;
+   right: 20px;
+   position: absolute;
+   margin-right: 40px;
+   font-weight: 500;
+   cursor: pointer;
+}
+main .data .chat-box .danger .icon:hover {
+    color: #535250;
+}

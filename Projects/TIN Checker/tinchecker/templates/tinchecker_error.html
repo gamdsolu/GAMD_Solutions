@@ -1,0 +1,48 @@
+{% extends 'admin_base.html' %}
+{% block title %}
+Admin | TIN Checker
+{% endblock %}
+{% block body %}
+<!-- MAIN -->
+<main>
+    <h1 class="title">TIN Checker</h1>
+    <div class="data">
+        <div class="chat-box">
+            <form method="post">
+                <div class="main">
+                    <div class="info">
+                        <span>Enter your TIN number!</span>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="tinnumber" id="tinnumber" class="text"
+                            placeholder="Enter your TIN Number...">
+                        <input type="submit" value="Search" class="button" id="searchbtn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="data">
+        <div class="chat-box">
+            {% if tasks.ID %}
+            <div class="danger" id="info_board">
+                <i class='bx bx-x icon' id="icon" style="margin-top: 15px;"></i>
+                <strong>{{ tasks.Info }}</strong> <br> {{ tasks.Detail }}
+            </div>
+            {% endif %}
+            <table>
+                <ul class="table">
+                    <li class="table-header">
+                        <div class="col col-1"><strong>IDENTIFIER</strong></div>
+                        <div class="col col-2"><strong>CONTENT</strong></div>
+                    </li>
+                    <li class="table-row">
+                        <div class="col col-1"><strong>Nothing to display!</strong></div>
+                        <div class="col col-2">Nothing to display!</div>
+                    </li>
+                </ul>
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}

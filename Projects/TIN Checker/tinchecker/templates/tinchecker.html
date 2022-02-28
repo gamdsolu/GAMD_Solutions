@@ -6,14 +6,38 @@ Admin | TIN Checker
 <!-- MAIN -->
 <main>
 	<h1 class="title">TIN Checker</h1>
-    <div class="data">
-		<div class="content-data">
-			<div class="head">
-				<h3>Table</h3>
-			</div>
-			<div class="chat-box">
-
-			</div>
+	<div class="data">
+		<div class="chat-box">
+			<form method="post">
+				<div class="main">
+					<div class="info">
+						<span>Enter your TIN number!</span>
+					</div>
+					<div class="inputs">
+						<input type="text" name="tinnumber" id="tinnumber" class="text"
+							placeholder="Enter your TIN Number...">
+						<input type="submit" value="Search" class="button" id="searchbtn">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="data">
+		<div class="chat-box" style="margin-top: 20px;">
+			<table>
+				<ul class="table">
+					<li class="table-header">
+						<div class="col col-1"><strong>IDENTIFIER</strong></div>
+						<div class="col col-2"><strong>CONTENT</strong></div>
+					</li>
+					{% for task in tasks %}
+					<li class="table-row">
+						<div class="col col-1"><strong>{{ task }}</strong></div>
+						<div class="col col-2">{{ tasks[task] }}</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</table>
 		</div>
 	</div>
 </main>

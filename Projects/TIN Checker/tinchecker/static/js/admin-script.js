@@ -168,3 +168,11 @@ tooltip: {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+// alert box close
+const info_board = document.querySelector('main .data .chat-box .danger')
+micon = document.querySelector('main .data .chat-box .danger .icon');
+
+micon.addEventListener("click", () => {
+info_board.style.display = "none";
+});

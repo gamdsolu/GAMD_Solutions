@@ -184,11 +184,11 @@ body{
     color: var(--text-color);
 }
 .table .col-1 {
-    flex-basis: 30%;
+    flex-basis: 50%;
     font-weight: bolder;
 }
 .table .col-2 {
-    flex-basis: 70%;
+    flex-basis: 50%;
 }
 @media only screen and (max-width: 599px) {
     .container{
@@ -256,6 +256,26 @@ body{
         }
         .motto {
             font-size: 10px;
+        }
+        .table {
+            padding: 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+        .table li {
+            padding: 5px 20px;
+        }
+        .table .table-header {
+            font-size: 12px;
+        }
+        .table .table-row {
+            font-size: 10px;
+        }
+        .success, .danger{
+            font-size: 14px;
+        }
+        .success .icon,
+        .danger .icon {
+           font-size: 20px;
         }
         @media only screen and (max-width: 390px) {
             .logo {
